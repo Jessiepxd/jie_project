@@ -1,25 +1,48 @@
-/**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- */
-
 package jieproject;
 
-/**
- * This class +++ Insert class description here +++
- *
- * @author Jie Chen
- */
-public abstract class Card {
-    //default modifier for child classes
+public class Card {
+    private final Suit suit;
+    private final Rank rank;
 
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    @Override
-    public abstract String toString();
+    public enum Suit{
+        HEART_RED(1), CLUB_BLACK(2), SPADE_BLACK(2), DIAMOND_RED(1);
+        private final int suitValue;
 
+        Suit(int suitValue) {
+            this.suitValue = suitValue;
+        }
+    }
+
+    public enum Rank{
+        ACE(1), TWO(2), THREE(3), FOUR(4),
+        FIVE(5), SIX(6), SEVEN(7), EIGHT(8),
+        NINE(9), TEN(10), JACK(11), QUEEN(12),
+        KING(13);
+        private final int rankValue;
+
+        Rank(int rankValue) {
+            this.rankValue = rankValue;
+        }
+    }
+
+    public Card(Rank rank, Suit suit) {
+        this.rank = rank;
+        this.suit = suit;
+    }
+
+    public Rank getRank() {
+        return rank;
+    }
+
+    public int getRankValue() {
+        return rank.rankValue;
+    }
+
+    public Suit getSuit() {
+        return suit;
+    }
+
+    public int getSuitValue() {
+        return suit.suitValue;
+    }
 }
