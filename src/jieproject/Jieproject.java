@@ -20,7 +20,7 @@ public class Jieproject {
         int num = input.nextInt();
         ArrayList<Card> hand1 = Hand.generateHand(num);
         ArrayList<Card> hand2 = Hand.generateHand(num);
-//        ArrayList<Card>[] hands = new ArrayList[]{hand1, hand2};
+        // ArrayList<Card>[] hands = new ArrayList[]{hand1, hand2};
 
         // the card that given by each player
         Card handGive1, handGive2;
@@ -60,6 +60,7 @@ public class Jieproject {
             System.out.println(p2.getName() + " chose the card: " + handGive2.getSuit() + " of " + handGive2.getRank());
             // remove the chosen card from player2's hand
             hand2.remove(handGive2);
+            System.out.println();
 
             // points for each player
             if (handGive1.getSuitValue() == handGive2.getSuitValue()) {
@@ -68,25 +69,31 @@ public class Jieproject {
                     p2.setPts(p2.getPts() + 6);
                     System.out.println(p1.getName() + ", got 0 points!");
                     System.out.println(p2.getName() + ", got 6 points!");
-
-                    System.out.println(p1.getName() + "'s points: " + p1.getPts());
-                    System.out.println(p2.getName() + "'s points: " + p2.getPts());
+                    
+                    System.out.println();
+                    
+                    System.out.println("> " + p1.getName() + "'s points: " + p1.getPts());
+                    System.out.println("> " + p2.getName() + "'s points: " + p2.getPts());
                 } else if (handGive2.getRankValue() == handGive1.getRankValue()) {
                     p1.setPts(p1.getPts() + 2);
                     p2.setPts(p2.getPts() + 4);
                     System.out.println(p1.getName() + ", got 2 points!");
                     System.out.println(p2.getName() + ", got 4 points!");
 
-                    System.out.println(p1.getName() + "'s points: " + p1.getPts());
-                    System.out.println(p2.getName() + "'s points: " + p2.getPts());
+                    System.out.println();
+                    
+                    System.out.println("> " + p1.getName() + "'s points: " + p1.getPts());
+                    System.out.println("> " + p2.getName() + "'s points: " + p2.getPts());
                 } else {
                     p1.setPts(p1.getPts() + 4);
                     p2.setPts(p2.getPts() + 2);
                     System.out.println(p1.getName() + ", got 4 points!");
                     System.out.println(p2.getName() + ", got 2 points!");
 
-                    System.out.println(p1.getName() + "'s points: " + p1.getPts());
-                    System.out.println(p2.getName() + "'s points: " + p2.getPts());
+                    System.out.println();
+                    
+                    System.out.println("> " + p1.getName() + "'s points: " + p1.getPts());
+                    System.out.println("> " + p2.getName() + "'s points: " + p2.getPts());
                 }
             } else {
                 if (handGive2.getRankValue() > handGive1.getRankValue()) {
@@ -95,24 +102,30 @@ public class Jieproject {
                     System.out.println(p1.getName() + ", got 2 points!");
                     System.out.println(p2.getName() + ", got 4 points!");
 
-                    System.out.println(p1.getName() + "'s points: " + p1.getPts());
-                    System.out.println(p2.getName() + "'s points: " + p2.getPts());
+                    System.out.println();
+                    
+                    System.out.println("> " + p1.getName() + "'s points: " + p1.getPts());
+                    System.out.println("> " + p2.getName() + "'s points: " + p2.getPts());
                 } else if (handGive2.getRankValue() == handGive1.getRankValue()) {
                     p1.setPts(p1.getPts() + 4);
                     p2.setPts(p2.getPts() + 2);
                     System.out.println(p1.getName() + ", got 4 points!");
                     System.out.println(p2.getName() + ", got 2 points!");
 
-                    System.out.println(p1.getName() + "'s points: " + p1.getPts());
-                    System.out.println(p2.getName() + "'s points: " + p2.getPts());
+                    System.out.println();
+                    
+                    System.out.println("> " + p1.getName() + "'s points: " + p1.getPts());
+                    System.out.println("> " + p2.getName() + "'s points: " + p2.getPts());
                 } else {
                     p1.setPts(p1.getPts() + 6);
                     p2.setPts(p2.getPts() + 0);
                     System.out.println(p1.getName() + ", got 6 points!");
                     System.out.println(p2.getName() + ", got 0 points!");
 
-                    System.out.println(p1.getName() + "'s points: " + p1.getPts());
-                    System.out.println(p2.getName() + "'s points: " + p2.getPts());
+                    System.out.println();
+                    
+                    System.out.println("> " + p1.getName() + "'s points: " + p1.getPts());
+                    System.out.println("> " + p2.getName() + "'s points: " + p2.getPts());
                 }
             }
         }
